@@ -9,9 +9,11 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
+    "axios": "^0.21.1",
     "next": "latest",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "sweetalert2": "^10.16.7"
   },
   "license": "MIT",
   "keywords": [

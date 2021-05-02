@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
+import waitingListPopUp from "./api/pop-up";
 
 function Copyright() {
   return (
@@ -78,7 +79,11 @@ export default function IndexPage() {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={waitingListPopUp}
+                  >
                     Sign me up!
                   </Button>
                 </Grid>

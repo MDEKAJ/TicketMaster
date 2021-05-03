@@ -18,6 +18,14 @@ export default function waitingListPopUp() {
         title: "Please enter your mobile number",
         text: "So we can contact you when these tickets become available",
         input: "tel",
+        preConfirm: (value) => {
+          let numberLength = value.length;
+          if (!value || isNaN(value) || numberLength < 11) {
+            Swal.showValidationMessage(
+              '<i class="fa fa-info-circle"></i>Invalid mobile number'
+            );
+          }
+        },
       },
     ])
     .then((result) => {
@@ -73,7 +81,7 @@ export default function waitingListPopUp() {
                 confirmButtonText: "Retry",
                 icon: "warning",
                 title: "Oops...",
-                text: "Something went wrong on our end",
+                text: "Something went wrong on our end.",
               });
             }
           },

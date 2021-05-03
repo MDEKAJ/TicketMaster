@@ -19,7 +19,8 @@ export default function waitingListPopUp() {
         text: "So we can contact you when these tickets become available",
         input: "tel",
         preConfirm: (value) => {
-          if (!value || isNaN(value)) {
+          let numberLength = value.length;
+          if (!value || isNaN(value) || numberLength < 11) {
             Swal.showValidationMessage(
               '<i class="fa fa-info-circle"></i>Invalid mobile number'
             );
